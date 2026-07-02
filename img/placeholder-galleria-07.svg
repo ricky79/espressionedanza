@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Segnaposto foto — sostituire con una foto reale">
   <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#1B171F"/><stop offset="1" stop-color="#3C2A1E"/>
+    <stop offset="0" stop-color="#1B171F"/><stop offset="1" stop-color="#333A1B"/>
   </linearGradient></defs>
   <rect width="800" height="600" fill="url(#g)"/>
-  <circle cx="150" cy="480" r="160" fill="none" stroke="#8C7AE6" stroke-width="3" opacity=".9"/>
+  <circle cx="150" cy="480" r="160" fill="none" stroke="#2FA24B" stroke-width="3" opacity=".9"/>
   <path d="M0 470 Q 200 380 400 460 T 800 440" fill="none" stroke="#F5F0E6" stroke-width="2" opacity=".35"/>
   <text x="40" y="560" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#F5F0E6" opacity=".55">ESPRESSIONEDANZA · FOTO 07</text>
 </svg>

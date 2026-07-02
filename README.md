@@ -22,6 +22,7 @@ Ogni punto da personalizzare è marcato in `index.html` con un commento `<!-- SO
 | **Foto della galleria** | Sezione *Galleria* | Vedi sotto: *Sostituire le foto* |
 | **Social** | Sezione *Contatti* | Sostituisci gli URL dei 4 link (Instagram, Facebook, TikTok, YouTube). Per eliminarne uno, cancella l'intero `<li>...</li>` |
 | **P.IVA** | Footer | Sostituisci `00000000000` |
+| **Logo** | Hero e footer | Il file è `img/logo.webp`: per aggiornarlo sostituisci il file mantenendo lo stesso nome |
 | **Titolo e descrizione Google** | `<head>` in alto | Aggiorna `<title>` e `<meta name="description">` se cambi città o testi |
 
 ### Aggiornare la mappa
