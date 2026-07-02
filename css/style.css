@@ -52,7 +52,7 @@
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: auto; }
+html { scroll-behavior: auto; overflow-x: clip; }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
@@ -64,6 +64,8 @@ body {
   line-height: 1.6;
   color: var(--ink);
   background: var(--ink); /* dietro le quinte: mai lampi bianchi */
+  overflow-x: hidden; /* la striscia ruotata sborda di proposito */
+  overflow-x: clip;
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -103,6 +105,9 @@ address { font-style: normal; }
   padding-inline: clamp(1.25rem, 5vw, 2.5rem);
 }
 
+/* Contiene lo sbordo voluto della striscia obliqua senza creare scroll */
+main { overflow-x: clip; }
+
 /* ---------- Sezioni: palco chiaro / palco scuro ---------- */
 .sezione { padding-block: clamp(4rem, 9vw, 7rem); }
 main section[id] { scroll-margin-top: calc(var(--header-h) + .75rem); }
@@ -138,10 +143,17 @@ main section[id] { scroll-margin-top: calc(var(--header-h) + .75rem); }
   height: var(--header-h);
   padding-inline: clamp(1.25rem, 5vw, 2.5rem);
   background: rgba(16, 13, 18, .78);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line-inv);
   color: var(--paper);
+}
+/* Vetro smerigliato su un layer separato: un backdrop-filter direttamente
+   sull'header lo renderebbe containing block del menu overlay (position:fixed) */
+.site-header::before {
+  content: "";
+  position: absolute; inset: 0;
+  z-index: -1;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
 }
 
 .brand {
@@ -158,7 +170,8 @@ main section[id] { scroll-margin-top: calc(var(--header-h) + .75rem); }
 .nav-toggle {
   display: none;
   z-index: 120;
-  width: 48px; height: 48px;
+  flex: 0 0 auto;
+  width: 48px; min-width: 48px; height: 48px;
   padding: 12px;
   flex-direction: column; justify-content: center; gap: 7px;
   background: none; border: 0; cursor: pointer;
@@ -198,9 +211,8 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-4.5px) rotat
   html.js .nav-menu {
     position: fixed; inset: 0; z-index: 110;
     display: grid; place-items: center;
-    background: rgba(16, 13, 18, .96);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    /* fondo quasi opaco: niente backdrop-filter, evita glitch di resa */
+    background: rgba(16, 13, 18, .97);
     visibility: hidden; opacity: 0;
     transition: opacity .3s ease, visibility .3s ease;
   }
@@ -258,7 +270,13 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-4.5px) rotat
   }
 }
 
-.hero-inner { position: relative; z-index: 1; }
+.hero-inner {
+  position: relative; z-index: 1;
+  width: 100%;
+  max-width: 1160px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+}
 
 .kicker {
   font-weight: 600;
@@ -272,7 +290,7 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-4.5px) rotat
 .hero h1 {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(2.8rem, 9vw, 6.5rem);
+  font-size: clamp(2.5rem, 9vw, 6.5rem);
   line-height: .95;
   text-transform: uppercase;
   letter-spacing: -.015em;
@@ -339,10 +357,9 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-4.5px) rotat
 /* ---------- Marquee ---------- */
 .marquee {
   position: relative; z-index: 2;
-  transform: rotate(-2deg);
+  /* scaleX copre gli angoli scoperti dalla rotazione senza allargare il layout */
+  transform: rotate(-2deg) scaleX(1.06);
   margin-block: -1.6rem;
-  width: 104%;
-  margin-left: -2%;
   background: var(--accent);
   color: var(--ink);
   overflow: hidden;
