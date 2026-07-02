@@ -467,8 +467,11 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-4.5px) rotat
   display: grid;
   gap: 3rem;
 }
-@media (min-width: 820px) {
-  .insegnanti-griglia { grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3.5vw, 3rem); }
+@media (min-width: 600px) {
+  .insegnanti-griglia { grid-template-columns: repeat(2, 1fr); gap: clamp(1.5rem, 3.5vw, 3rem); }
+}
+@media (min-width: 1080px) {
+  .insegnanti-griglia { grid-template-columns: repeat(4, 1fr); }
 }
 
 .card-insegnante { text-align: center; }

@@ -18,7 +18,7 @@ Ogni punto da personalizzare è marcato in `index.html` con un commento `<!-- SO
 | **Mappa** | Sezione *Dove siamo* | Vedi sotto: *Aggiornare la mappa* |
 | **Orari dei corsi** | Le 6 card nella sezione *Corsi* | Una riga per corso, formato libero |
 | **Orari segreteria** | Sezione *Contatti* | Testo libero |
-| **Insegnanti** | Sezione *Insegnanti* | Nome, ruolo e bio in ogni card; per le foto vedi sotto |
+| **Insegnanti** | Sezione *Insegnanti* | Nomi e discipline già impostati; per aggiungere una bio inserisci `<p class="bio">...</p>` sotto il ruolo; per le foto vedi sotto |
 | **Foto della galleria** | Sezione *Galleria* | Vedi sotto: *Sostituire le foto* |
 | **Social** | Sezione *Contatti* | Sostituisci gli URL dei 4 link (Instagram, Facebook, TikTok, YouTube). Per eliminarne uno, cancella l'intero `<li>...</li>` |
 | **P.IVA** | Footer | Sostituisci `00000000000` |
