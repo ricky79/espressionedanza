@@ -63,8 +63,8 @@ Every placeholder is marked with an HTML comment `<!-- SOSTITUISCI: ... -->` and
 index.html
 css/style.css
 js/main.js
-img/            (favicon + placeholder SVGs + self-hosted font files under img/../fonts if used)
-fonts/          (self-hosted woff2, if download succeeds)
+img/            (favicon + placeholder SVGs)
+fonts/          (self-hosted woff2; omitted if download fails and system stack is used)
 README.md       (Italian: content-replacement guide + publishing guide)
 docs/superpowers/specs/  (this spec; plan doc)
 ```
