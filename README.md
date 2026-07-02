@@ -10,13 +10,13 @@ Ogni punto da personalizzare è marcato in `index.html` con un commento `<!-- SO
 
 | Cosa | Dove (in `index.html`) | Come |
 |---|---|---|
-| **Telefono** | Sezione *Contatti* | Cambia sia il testo visibile `+39 333 0000000` sia il link `href="tel:+393330000000"` (formato internazionale, senza spazi) |
-| **WhatsApp** | Bottone nell'*hero* e in *Contatti* | Sostituisci `393330000000` in entrambi i link `https://wa.me/...` (prefisso 39 + numero, senza `+` né spazi) |
+| **Telefono** | Sezione *Contatti* | Già impostato (`+39 347 104 8268`). Per cambiarlo: aggiorna sia il testo visibile sia il link `href="tel:+39..."` (formato internazionale, senza spazi) |
+| **WhatsApp** | Bottone nell'*hero* e in *Contatti* | Già impostato. Per cambiarlo: sostituisci il numero in entrambi i link `https://wa.me/39...` (prefisso 39 + numero, senza `+` né spazi) |
 | **Email** | Sezione *Contatti* | Cambia `info@espressionedanza.it` sia nel testo sia in `href="mailto:..."` |
 | **Indirizzo** | Sezione *Dove siamo* | Cambia via, CAP e città nel blocco `<address>`, e la query del link "Apri in Google Maps" |
 | **Indicazioni** | Sezione *Dove siamo* | Aggiorna la frase su mezzi pubblici e parcheggio |
 | **Mappa** | Sezione *Dove siamo* | Vedi sotto: *Aggiornare la mappa* |
-| **Orari dei corsi** | Le 3 card nella sezione *Corsi* | Una riga per corso, formato libero |
+| **Orari dei corsi** | Le 6 card nella sezione *Corsi* | Una riga per corso, formato libero |
 | **Orari segreteria** | Sezione *Contatti* | Testo libero |
 | **Insegnanti** | Sezione *Insegnanti* | Nome, ruolo e bio in ogni card; per le foto vedi sotto |
 | **Foto della galleria** | Sezione *Galleria* | Vedi sotto: *Sostituire le foto* |

@@ -400,6 +400,7 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-4.5px) rotat
 }
 .card-corso:hover { transform: translateY(-5px); border-top-color: var(--accent); }
 .card-corso.corso-aereo:hover { border-top-color: var(--violet); }
+.card-corso.corso-gioco:hover { border-top-color: var(--amber); }
 
 .card-corso .numero {
   position: absolute;
@@ -417,6 +418,7 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-4.5px) rotat
     -webkit-text-stroke: 1.5px rgba(16, 13, 18, .28);
   }
   .card-corso.corso-aereo .numero { -webkit-text-stroke-color: rgba(140, 122, 230, .55); }
+  .card-corso.corso-gioco .numero { -webkit-text-stroke-color: rgba(255, 177, 61, .6); }
 }
 
 .card-corso h3 {
@@ -443,6 +445,7 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-4.5px) rotat
   border-radius: 50%;
 }
 .card-corso.corso-aereo .corso-meta li::before { border-color: var(--violet); }
+.card-corso.corso-gioco .corso-meta li::before { border-color: var(--amber); }
 
 /* ---------- Insegnanti ---------- */
 .insegnanti-griglia {
@@ -566,6 +569,12 @@ body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-4.5px) rotat
   min-height: 380px;
   border: 0;
 }
+.mappa-wrap small {
+  display: block;
+  padding: .55rem 1rem;
+  font-size: .8rem;
+}
+.mappa-wrap small a { color: var(--accent-deep); }
 
 /* ---------- Contatti ---------- */
 .contatto-box {
