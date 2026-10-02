@@ -4,6 +4,8 @@
 
 Sito statico di presentazione della scuola: una sola pagina con corsi, insegnanti, galleria, mappa e contatti. **Non serve installare nulla**: per vederlo basta aprire `index.html` con il browser (doppio clic). Tutti i testi e le foto attuali sono **segnaposto** da sostituire con i contenuti reali.
 
+App pubblicata: **https://ricky79.github.io/espressionedanza/**
+
 ## Come sostituire i contenuti
 
 Ogni punto da personalizzare è marcato in `index.html` con un commento `<!-- SOSTITUISCI: ... -->`. Cerca la parola `SOSTITUISCI` nel file e segui questa tabella:
